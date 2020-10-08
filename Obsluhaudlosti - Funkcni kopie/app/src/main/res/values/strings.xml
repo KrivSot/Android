@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">BMI kalkulačka</string>
+    <string name="button1">Odeslat</string>
+    <string name="Reset">Resetovat data</string>
+    <string name="Vyska">Výška (m):</string>
+    <string name="Hmotnost">Hmotnost (kg):</string>
+    <string name="Header">BMI kalkulačka</string>
+    <string name="Vysledek">Vaše BMI: </string>
+    <string name="ZR">Zdravotní Rizika:</string>
+</resources>
