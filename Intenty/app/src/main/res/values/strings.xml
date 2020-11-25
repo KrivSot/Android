@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ *  _____ _______         _                      _
+ * |_   _|__   __|       | |                    | |
+ *   | |    | |_ __   ___| |___      _____  _ __| | __  ___ ____
+ *   | |    | | '_ \ / _ \ __\ \ /\ / / _ \| '__| |/ / / __|_  /
+ *  _| |_   | | | | |  __/ |_ \ V  V / (_) | |  |   < | (__ / /
+ * |_____|  |_|_| |_|\___|\__| \_/\_/ \___/|_|  |_|\_(_)___/___|
+ *                   ___
+ *                  |  _|___ ___ ___
+ *                  |  _|  _| -_| -_|  LICENCE
+ *                  |_| |_| |___|___|
+ *
+ *   PROGRAMOVÁNÍ  <>  DESIGN  <>  PRÁCE/PODNIKÁNÍ  <>  HW A SW
+ *
+ * Tento zdrojový kód pochází z IT sociální sítě WWW.ITNETWORK.CZ
+ *
+ * Můžete ho upravovat a používat jak chcete, musíte však zmínit
+ * odkaz na http://www.itnetwork.cz
+-->
+<resources>
+    <string name="app_name">Activities</string>
+
+    <!-- Titulní texty aktivit -->
+    <string name="activity_main_title">Hlavní aktivita</string>
+    <string name="sum_activity_title">SumActivity</string>
+    <string name="sum_result_activity_title">Součet čísel</string>
+
+    <!-- Texty tlačítek v hlavní aktivitě -->
+    <string name="activity_main_btn_sum_activity">Součet čísel</string>
+    <string name="activity_main_btn_map_activity">Fragment</string>
+    <string name="activity_main_btn_phone_activity">internet(Implicitni intent)</string>
+    <string name="activity_main_btn_photo_activity">Fragment - tabulka</string>
+    <string name="activity_main_btn_share_activity">Dalsi projekt</string>
+    <string name="activity_main_btn_itnetwork">Dalsi projekt</string>
+
+    <!-- Popis aktivit -->
+    <string name="sum_activity_desc">Oboustranná komunikace dvou aktivit. Tato aktivita od uživatele získá dvě čísla, která tlačítkem odešleme do jiné aktivity, kde tato čísla budou sečtena a výsledek bude vrácen do této aktivity.</string>
+
+    <!-- Texty pro aktivitu SumActivity -->
+    <string name="sum_activity_number_1">První číslo:</string>
+    <string name="sum_activity_number_2">Druhé číslo:</string>
+    <string name="sum_activity_result">Výsledek výpočtu:</string>
+
+    <!-- Texty pro aktivitu sčítající dvě přijatá čísla -->
+    <string name="sum_result_activity_number_1">První přijaté číslo:</string>
+    <string name="sum_result_activity_number_2">Druhé přijaté číslo:</string>
+    <string name="sum_result_activity_total_sum">Součet přijatých čísel:</string>
+    <string name="sum_result_activity_button">Odeslat součet</string>
+
+    <!-- Texty informativních a chybových zpráv pro uživatele -->
+    <string name="info_no_result">Nepřišel žádný výsledek...</string>
+    <string name="info_error_loading_result">Chyba načítání výsledku...</string>
+    <string name="info_incorrect_entry">Chybné zadání...</string>
+
+    <string name="info_finish_app">Pro ukončení aplikace stiskněte ZPĚT znovu</string>
+
+    <string name="incoming_intent_data_error">Chyba přijatých dat...</string>
+
+</resources>

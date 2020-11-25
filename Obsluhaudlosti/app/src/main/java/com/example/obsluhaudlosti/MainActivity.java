@@ -48,10 +48,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void Reset(View v)
     {
-        EditText vyska = findViewById(R.id.NameText);
+        Intent i = new Intent(Intent.ACTION_CALL);
+        /*EditText vyska = findViewById(R.id.NameText);
         vyska.setText("");
         EditText hmotnost = findViewById(R.id.HmotnostEditText);
-        hmotnost.setText("");
+        hmotnost.setText("");*/
     }
 
     public void error()
