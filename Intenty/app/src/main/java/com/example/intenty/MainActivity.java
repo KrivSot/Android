@@ -37,6 +37,9 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intentfragment);
                 break;
             case R.id.btnPhoneActivity:
+                Intent sendIntent = new Intent(Intent.ACTION_VIEW);
+                sendIntent.setData(Uri.parse("http://www.google.com/webhp"));
+                startActivity(sendIntent);
                 break;
             case R.id.btnPhotoActivity:
                 break;
