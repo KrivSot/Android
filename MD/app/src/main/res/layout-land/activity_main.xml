@@ -7,12 +7,12 @@
         android:id="@+id/Seznam"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:lyout_weight="1"
+        android:layout_weight="1"
         tools:ignore="Suspicious0dp" />
 
     <FrameLayout android:id="@+id/detaily"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:lyout_weight="3"
+        android:layout_weight="3"
         tools:ignore="Suspicious0dp" />
 </LinearLayout>
