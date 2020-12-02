@@ -4,9 +4,13 @@ import android.app.Activity;
 import android.content.res.Configuration;
 import android.os.Bundle;
 
-import androidx.fragment.app.Fragment;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
-public class DetailsActivity extends Activity {
+
+public class DetailsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -19,9 +23,12 @@ public class DetailsActivity extends Activity {
 
         if(savedInstanceState == null){
             DetailFragment details = new DetailFragment();
-
-            details.setArguments(getIntent().getExtras());
-            getFragmentManager().beginTransaction().add(android.R.id.content,details);
+            // odevzdání indexu vybrané položky
+            details.setArguments (getIntent().getExtras ());
+            FragmentManager fm = getSupportFragmentManager();
+            FragmentTransaction ft = fm.beginTransaction();
+            ft.add(android.R.id.content, details);
+            ft.commit();
 
         }
     }

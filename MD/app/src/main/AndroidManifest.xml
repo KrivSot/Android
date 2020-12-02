@@ -16,7 +16,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".DetailsActivity"
+        <activity android:name=".DetailsActivity" android:parentActivityName=".main_activity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
