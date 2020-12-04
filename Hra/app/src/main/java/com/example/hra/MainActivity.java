@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void Skore(View view){
+    public void Skore(View view){ //nefunkcni
         Intent skore = new Intent(MainActivity.this,skore.class);
         startActivity(skore);
     }
