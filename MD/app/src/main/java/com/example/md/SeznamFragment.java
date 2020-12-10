@@ -47,34 +47,30 @@ public class SeznamFragment extends ListFragment {
         showDetails(position);
     }
 
-    //zobraz detaily
     public void showDetails(int index){
         mVybrany = index;
-        // Seznam v ListView a detaily vedle sebe
+
         Configuration configInfo = getResources().getConfiguration();
         if (configInfo.orientation == Configuration.ORIENTATION_LANDSCAPE) {
 
             getListView().setItemChecked(index, true);
-            // zobrazení detailů
+
             FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
             FragmentTransaction ft = fragmentManager.beginTransaction();
             DetailFragment details;
 
 
 
-            details = (DetailFragment)getFragmentManager().findFragmentById(R.id.pro2fragment);
+            details = (DetailFragment)getFragmentManager().findFragmentById(R.id.Dvafragment);
 
             if (details == null || details.getShownIndex() != index) {
-                // detail fragment pro vybraný index
                 details = DetailFragment.newInstance(index);
-                //nahrazení detail fragmentu aktuálním
-                ft.replace(R.id.pro2fragment, details);
+                ft.replace(R.id.Dvafragment, details);
                 ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
                 ft.commit();
             }
         }
         else {
-            // Detail Fragment v nové aktivite
             Intent intent = new Intent();
             intent.setClass(getActivity(), DetailsActivity.class);
             intent.putExtra("index", index);

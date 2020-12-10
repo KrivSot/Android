@@ -19,7 +19,7 @@ public class main_activity extends AppCompatActivity {
             SeznamFragment sf = new SeznamFragment();
             FragmentManager fm = getSupportFragmentManager();
             FragmentTransaction ft = fm.beginTransaction();
-            ft.add(R.id.pro1fragment,sf);
+            ft.add(R.id.Jedenfragment,sf);
             ft.commit();
 
         } else {

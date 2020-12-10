@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <FrameLayout
-        android:id="@+id/pro1fragment"
+        android:id="@+id/Jedenfragment"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="2">
@@ -14,7 +14,7 @@
     </FrameLayout>
 
     <FrameLayout
-        android:id="@+id/pro2fragment"
+        android:id="@+id/Dvafragment"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="3" />
