@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -46,34 +47,46 @@ public class Konec extends AppCompatActivity {
         }
     }
 
+
     View.OnClickListener clickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            EditText jmeno;
+            EditText jmeno = findViewById(R.id.JmenoEditText);
             Intent zpet = new Intent();
-            if (SVNM) {
-                if (view.getId() == R.id.button2) {
-                    jmeno = findViewById(R.id.JmenoEditText);
-                    zpet.putExtra("Konec",false);
-                    zpet.putExtra("j", String.valueOf(jmeno.getText()));
-                    setResult(RESULT_OK, zpet);
-                    finish();
+
+                if (SVNM) {
+                    if(!String.valueOf(jmeno.getText()).isEmpty()) {
+                        if (view.getId() == R.id.button2) {
+                            jmeno = findViewById(R.id.JmenoEditText);
+                            zpet.putExtra("Konec", false);
+                            zpet.putExtra("j", String.valueOf(jmeno.getText()));
+                            setResult(RESULT_OK, zpet);
+                            finish();
+                        } else {
+                            jmeno = findViewById(R.id.JmenoEditText);
+                            zpet.putExtra("Konec", true);
+                            zpet.putExtra("j", String.valueOf(jmeno.getText()));
+                            setResult(RESULT_OK, zpet);
+                            finish();
+                        }
+                    }
+                    else{
+                        error();
+                    }
+                } else {
+                    if (view.getId() == R.id.button2) {
+                        zpet.putExtra("Konec", false);
+                        setResult(RESULT_CANCELED, zpet);
+                        finish();
+                    } else {
+                        zpet.putExtra("Konec", true);
+                        setResult(RESULT_CANCELED, zpet);
+                        finish();
+                    }
                 }
-                else{
-                    jmeno = findViewById(R.id.JmenoEditText);
-                    zpet.putExtra("Konec",true);
-                    zpet.putExtra("j", String.valueOf(jmeno.getText()));
-                    setResult(RESULT_OK, zpet);
-                    finish();
-                }
-            }
-            else{
-                jmeno = findViewById(R.id.JmenoEditText);
-                zpet.putExtra("Konec",false);
-                zpet.putExtra("j", jmeno.getText());
-                setResult(RESULT_CANCELED, zpet);
-                finish();
-            }
     }
-    };
+};
+    public void error(){
+        Toast.makeText(this.getApplicationContext(), "Nezadal si své jméno", Toast.LENGTH_SHORT).show();
+    }
 }

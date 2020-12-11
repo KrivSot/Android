@@ -118,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
             if(data.getBooleanExtra("Konec",true)){
                 SharedPreferences.Editor editor = spref.edit();
                 editor.putInt(TOP_SCORE, skore);
-                editor.putString(TOP_JMENO,String.valueOf(data.getStringExtra("j")));
+                editor.putString(TOP_JMENO,String.valueOf(data.getStringExtra("j"))); //získá jméno z druhé aktivity
 
                 editor.commit();
                 this.finishAffinity();

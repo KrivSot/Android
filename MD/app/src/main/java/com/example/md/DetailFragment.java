@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.fragment.*;
@@ -31,10 +32,17 @@ public class DetailFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         ScrollView scroller = new ScrollView(getActivity());
+        LinearLayout ll = new LinearLayout(getActivity());
+        ll.setOrientation(LinearLayout.VERTICAL);
+        ImageView iv = new ImageView(getActivity());
         TextView text = new TextView(getActivity());
         int padding = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 4, getActivity().getResources().getDisplayMetrics());
         text.setPadding(padding, padding, padding, padding);
-        scroller.addView(text);
+        iv.setPadding(padding,padding,padding,padding);
+        iv.setImageResource(R.drawable.ic_launcher_background);
+        ll.addView(iv);
+        ll.addView(text);
+        scroller.addView(ll);
         text.setText(AndroidInfo.POPISY[getShownIndex()]);
         return scroller;
     }

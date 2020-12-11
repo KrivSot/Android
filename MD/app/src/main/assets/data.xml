@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kralove>
+    <kral>
+        <poradi>1</poradi>
+        <jmeno>Vratislav II</jmeno>
+        <zil>1031 - 1092</zil>
+        <vladnul>1061 - 1092</vladnul>
+        <poznamka>
+            Syn Břetislava I. Od roku 1085 byl prvním českým králem.
+            Nedědičný titul ad personam mu propůjčil císař Jindřich IV.
+            V letech 1085–1092 byl také titulárním polským králem.
+        </poznamka>
+    </kral>
+    <kral>
+        <poradi>2</poradi>
+        <jmeno>Vladislav II</jmeno>
+        <zil>1110 - 1174</zil>
+        <vladnul>1140 - 1172</vladnul>
+        <poznamka>
+            Syn Vladislava I. a druhý český král.
+            Zřejmě nedědičný královský titul mu propůjčil císař
+            Fridrich I. Barbarossa v roce 1158.
+        </poznamka>
+    </kral>
+</kralove>
