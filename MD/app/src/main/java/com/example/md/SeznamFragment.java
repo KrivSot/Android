@@ -11,23 +11,29 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.fragment.app.ListFragment;
 
+import java.io.IOException;
 import java.util.List;
 
 public class SeznamFragment extends ListFragment {
 
     int mVybrany = 0;
-    kArrayAdapter k = new kArrayAdapter();
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        ArrayAdapter<String> connectArrayToListView = new ArrayAdapter<String>(
-                getActivity(),
-                android.R.layout.simple_list_item_activated_1,AndroidInfo.NAZVY);
+        ArrayAdapter<kralove> connectArrayToListView;
 
-        k.Initialize();
+        List<kralove> kralove = null;
+        try {
+            XMLPullParserHandler parser = new XMLPullParserHandler();
+            kralove = parser.parse(getContext().getAssets().open("data.xml"),true);
+            connectArrayToListView = new ArrayAdapter<kralove>(getActivity(),
+                    android.R.layout.simple_list_item_activated_1, kralove);
+            setListAdapter(connectArrayToListView);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         //Připoj ListView na data
-        setListAdapter(k.GetKralove());
         View detailsFrame = getActivity().findViewById(R.id.proObaFragmenty);
 
         // onSaveInstanceState() při rotaci

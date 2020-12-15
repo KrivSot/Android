@@ -22,4 +22,59 @@
             Fridrich I. Barbarossa v roce 1158.
         </poznamka>
     </kral>
+    <kral>
+        <poradi>3</poradi>
+        <jmeno>Přemysl Otakar I.</jmeno>
+        <zil>1155 - 1230</zil>
+        <vladnul>1197 - 1230</vladnul>
+        <poznamka>
+            Podruhé na trůně. V očekávání Přemyslovy vojenské pomoci jej Filip Švábský v září či v říjnu 1198 nechal korunovat českým králem.
+            Přemysl byl 24. srpna 1203 podruhé korunován papežským legátem Guidem z Praeneste.
+            Přemysl si postupně nechal potvrdit královskou hodnost od obou římských králů i od papeže.
+            Dědičný titul zaručila Zlatá bula sicilská (1212).
+        </poznamka>
+    </kral>
+    <kral>
+        <poradi>4</poradi>
+        <jmeno>Václav I.</jmeno>
+        <zil>1205 - 1253</zil>
+        <vladnul>1230 - 1253</vladnul>
+        <poznamka>
+            Syn Přemysla I., čtvrtý český král. Korunován byl už v roce 1228.
+            Přispěl k odražení mongolského vpádu do Evropy a společně se synem Přemyslem získal Rakousko.
+        </poznamka>
+    </kral>
+    <kral>
+        <poradi>5</poradi>
+        <jmeno>Přemysl Otakar II.</jmeno>
+        <zil>1233 - 1278</zil>
+        <vladnul>1253 - 1278</vladnul>
+        <poznamka>
+            Syn Václava I., pátý český král (korunován 1261).
+            Také vévoda rakouský, štýrský, korutanský, kraňský a furlanský.
+            Podcenil ale vývoj v římskoněmecké říši a politiku papežské kurie.
+            Dne 26. srpna 1278 zahynul v bitvě na Moravském poli proti Rudolfu I. Habsburskému.
+        </poznamka>
+    </kral>
+    <kral>
+        <poradi>6</poradi>
+        <jmeno>Václav II.</jmeno>
+        <zil>1271 - 1305</zil>
+        <vladnul>1278 - 1305</vladnul>
+        <poznamka>
+            Syn Přemysla II., šestý český král (korunován 1297).
+            Také polský král (korunován roku 1300). Pro syna získal i uherský trůn.
+        </poznamka>
+    </kral>
+    <kral>
+        <poradi>7</poradi>
+        <jmeno>Václav III.</jmeno>
+        <zil>1289 - 1306</zil>
+        <vladnul>1305 - 1306</vladnul>
+        <poznamka>
+            Syn Václava II, sedmý český král. V letech 1301–1304 byl uherským králem jako Ladislav V.
+            Po smrti otce se snažil udržet unii s Polskem, byl však zavražděn.
+            Skončilo tak více než 400 let vlády Přemyslovců v Čechách.
+        </poznamka>
+    </kral>
 </kralove>

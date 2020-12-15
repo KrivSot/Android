@@ -2,6 +2,7 @@ package com.example.md;
 
 public class kralove {
     private String jmeno,poradi, zil, vladnul, poznamka;
+    private boolean seznam;
 
     public kralove(String jmeno, String poradi, String zil, String vladnul, String poznamka) {
         this.jmeno = jmeno;
@@ -22,7 +23,10 @@ public class kralove {
     @Override
     public String toString()
     {
-        return poradi + "\n"+ zil + "\n" + vladnul + "\n" + poznamka;
+        if(seznam)
+        return jmeno;
+        else
+            return poradi + "\n"+ zil + "\n" + vladnul + "\n" + poznamka;
     }
 
     //Setry
@@ -38,4 +42,12 @@ public class kralove {
     public String getZil() { return zil; }
     public String getVladnul() { return vladnul; }
     public String getPoznamka() { return poznamka; }
+
+    public boolean getSeznam() {
+        return seznam;
+    }
+
+    public void setSeznam(boolean seznam) {
+        this.seznam = seznam;
+    }
 }

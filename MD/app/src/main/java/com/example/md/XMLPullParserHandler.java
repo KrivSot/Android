@@ -24,7 +24,7 @@ public class XMLPullParserHandler {
         return kralove;
     }
 
-    public  List<kralove> parse(InputStream is){
+    public  List<kralove> parse(InputStream is,boolean seznam){
         XmlPullParserFactory factory = null;
         XmlPullParser parser = null;
         try {
@@ -40,6 +40,7 @@ public class XMLPullParserHandler {
                     case XmlPullParser.START_TAG:
                         if (tagName.equalsIgnoreCase("kral")){
                             kral = new kralove();
+                            kral.setSeznam(seznam);
                         }
                         break;
 
