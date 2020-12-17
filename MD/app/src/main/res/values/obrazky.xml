@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <integer-array name="kralove">
+        <item>@drawable/kral1</item>
+        <item>@drawable/kral2</item>
+        <item>@drawable/kral3</item>
+        <item>@drawable/kral4</item>
+        <item>@drawable/kral5</item>
+        <item>@drawable/kral6</item>
+        <item>@drawable/kral7</item>
     </integer-array>
 </resources>

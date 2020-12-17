@@ -1,10 +1,12 @@
 package com.example.md;
 
+import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
@@ -13,6 +15,10 @@ import androidx.fragment.*;
 import androidx.fragment.app.Fragment;
 
 import org.w3c.dom.Text;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DetailFragment extends Fragment {
 
@@ -39,11 +45,25 @@ public class DetailFragment extends Fragment {
         int padding = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 4, getActivity().getResources().getDisplayMetrics());
         text.setPadding(padding, padding, padding, padding);
         iv.setPadding(padding,padding,padding,padding);
-        iv.setImageResource(R.drawable.ic_launcher_background);
+
+        //nacte obrazky z xml
+        TypedArray imgs = getResources().obtainTypedArray(R.array.kralove);
+        iv.setImageResource(imgs.getResourceId(getShownIndex(),0));
         ll.addView(iv);
         ll.addView(text);
         scroller.addView(ll);
-        text.setText(AndroidInfo.POPISY[getShownIndex()]);
+        imgs.recycle(); // recycle the array
+        ArrayList<kralove> connectArrayToListView;
+        List<kralove> kralove = null;
+        try {
+            XMLPullParserHandler parser = new XMLPullParserHandler();
+            kralove = parser.parse(getContext().getAssets().open("data.xml"),false);
+            connectArrayToListView = new ArrayList<kralove>(kralove);
+            text.setText(String.valueOf(connectArrayToListView.get(getShownIndex())));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         return scroller;
     }
 }

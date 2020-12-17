@@ -34,7 +34,7 @@ public class SeznamFragment extends ListFragment {
             e.printStackTrace();
         }
         //Připoj ListView na data
-        View detailsFrame = getActivity().findViewById(R.id.proObaFragmenty);
+        View detailsFrame = getActivity().findViewById(R.id.frameLayout_proOba);
 
         // onSaveInstanceState() při rotaci
         if (savedInstanceState != null) {

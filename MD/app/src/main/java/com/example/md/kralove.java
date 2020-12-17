@@ -26,7 +26,7 @@ public class kralove {
         if(seznam)
         return jmeno;
         else
-            return poradi + "\n"+ zil + "\n" + vladnul + "\n" + poznamka;
+            return jmeno+"\n"+"pořadí vlády: "+poradi + "\n"+ "žil: "+zil + "\n" +"vládnul: "+ vladnul + "\n" + poznamka;
     }
 
     //Setry
@@ -35,6 +35,7 @@ public class kralove {
     public void setZil(String zil) { this.zil = zil; }
     public void setVladnul(String vladnul) { this.vladnul = vladnul; }
     public void setPoznamka(String poznamka) { this.poznamka = poznamka; }
+    public void setSeznam(boolean seznam) { this.seznam = seznam; }
 
     //Getry
     public String getJmeno() { return jmeno; }
@@ -47,7 +48,5 @@ public class kralove {
         return seznam;
     }
 
-    public void setSeznam(boolean seznam) {
-        this.seznam = seznam;
-    }
+
 }

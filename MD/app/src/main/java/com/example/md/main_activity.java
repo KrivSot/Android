@@ -27,7 +27,7 @@ public class main_activity extends AppCompatActivity {
             SeznamFragment sf = new SeznamFragment();
             FragmentManager fm = getSupportFragmentManager();
             FragmentTransaction ft = fm.beginTransaction();
-            ft.add(R.id.proObaFragmenty,sf);
+            ft.add(R.id.frameLayout_proOba,sf);
             ft.commit();
         }
     }
